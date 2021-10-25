@@ -4,12 +4,12 @@ pipeline{
       stage('Build'){
           steps{
           echo 'Build Stage'
-              bat 'mvn clean'
+              bat 'echo mvn clean goal is running........'
           }
       }
-      stage('Test skipped'){
+      stage('Test'){
           steps{
-          bat 'echo skipped'
+          bat 'echo skipped the testing stage'
           }         
       }
         stage('Stage 3'){
@@ -17,12 +17,12 @@ pipeline{
          echo 'Stage 3'
           }         
       }
-        stage('Stage 4'){
+        stage('Stage: integration '){
           steps{
          echo 'Stage4'
           }         
       }
-        stage('Stage 5'){
+        stage('Stage: Deployment'){
           steps{
          echo 'Stage5'
           }         
